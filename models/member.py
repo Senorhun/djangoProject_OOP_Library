@@ -1,12 +1,22 @@
 from models.person import Person
+import random, string
 
 class Member(Person):
+    used_IDs = set()
 
-    def __init__(self, name, birth, email, ID):
+    def __init__(self, name, birth, email, ID=None):
         super().__init__(name, birth)
         self.email = email
-        self.ID = ID
         self.is_librarian = False
+        self.ID = self.generate_id()
+
+    def generate_id(self):
+        unique_id = f"{str(random.randint(1000,9999))}-{"".join(random.choices(string.ascii_uppercase, k=2))}"
+        while True:
+            if unique_id not in Member.used_IDs:
+                Member.used_IDs.add(unique_id)
+                return unique_id
+
 
     def __str__(self):
         return f"Member => {super().__str__()}, Email: {self.email}, ID: {self.ID}, Librarian: {self.is_librarian}" 

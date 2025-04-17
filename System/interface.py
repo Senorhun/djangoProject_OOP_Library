@@ -8,7 +8,11 @@ print("\nWelcome to the Library")
 
 book1 = Book("title", 1995, "writer")
 person1 = Person("Bono", 1990)
-member1 = Member("Bono", 1990, "bono@", 123)
+member1 = Member("Bono1", 1990, "bono@")
+member2 = Member("Bono2", 1990, "bono@")
+member3 = Member("Bono3", 1990, "bono@")
+member4 = Member("Bono4", 1990, "bono@")
+member5 = Member("Bono5", 1990, "bono@")
 
 def run():
     while True:
@@ -18,6 +22,10 @@ def run():
                 print(library1.list_books())
             case '2':
                 print(member1)
+                print(member2)
+                print(member3)
+                print(member4)
+                print(member5)
             case '3':
                 pass
             case '4':
