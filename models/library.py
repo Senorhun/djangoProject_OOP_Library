@@ -7,7 +7,9 @@ class Library:
         self.book_list = book_list
 
     def list_books(self):
-        return ", ".join(self.book_list)
+        for book in self.book_list:
+            print(f"Title: {book} ")
+        
     
     def list_members(self):
         return ", ".join(self.member_list)
