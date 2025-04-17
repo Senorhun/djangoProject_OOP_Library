@@ -5,6 +5,7 @@ class Library:
         self.name = name
         self.member_list = member_list
         self.book_list = book_list
+        self.access_code = 777
 
     def list_books(self):
         for book in self.book_list:

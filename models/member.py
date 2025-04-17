@@ -6,6 +6,7 @@ class Member(Person):
         super().__init__(name, birth)
         self.email = email
         self.ID = ID
+        self.is_librarian = False
 
     def __str__(self):
-        return f"Member, {super().__str__()}, Email: {self.email}, ID: {self.ID}" 
+        return f"Member => {super().__str__()}, Email: {self.email}, ID: {self.ID}, Librarian: {self.is_librarian}" 

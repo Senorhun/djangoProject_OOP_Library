@@ -2,7 +2,6 @@ from models.library import Library
 from models.book import book_list, Book
 from models.person import people_list, Person
 from models.member import Member
-from models.librarian import Librarian
 
 library1 = Library("Library", people_list, book_list)
 print("\nWelcome to the Library")
@@ -10,7 +9,6 @@ print("\nWelcome to the Library")
 book1 = Book("title", 1995, "writer")
 person1 = Person("Bono", 1990)
 member1 = Member("Bono", 1990, "bono@", 123)
-librarian1 = Librarian("Juno", 1993, "juno@", 123, "pass")
 
 def run():
     while True:
@@ -19,7 +17,7 @@ def run():
             case '1':
                 print(library1.list_books())
             case '2':
-                pass
+                print(member1)
             case '3':
                 pass
             case '4':
