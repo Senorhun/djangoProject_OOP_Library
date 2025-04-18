@@ -5,11 +5,11 @@ class Member(Person):
     used_IDs = set()
     
 
-    def __init__(self, name, birth, email):
+    def __init__(self, name, birth, email, ID = None, librarian = False):
         super().__init__(name, birth)
         self.email = email
-        self.is_librarian = False
-        self.ID = self.generate_id()
+        self.is_librarian = librarian
+        self.ID = ID if ID is not None else self.generate_id()
 
     def generate_id(self):
         unique_id = f"{str(random.randint(1000,9999))}-{"".join(random.choices(string.ascii_uppercase, k=2))}"

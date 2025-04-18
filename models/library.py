@@ -14,16 +14,18 @@ class Library:
             print(f"Title: {book} ")
         
     def list_members(self):
-        return ", ".join(self.member_list)
+        for member in self.member_list:
+            print(member)
 
-    def register(self, name, birth, email):
-        member = models.member.Member(name, birth, email)
+    def register(self, name, birth, email, ID, librarian = False):
+        member = models.member.Member(name, birth, email, ID, librarian)
         self.member_list.append(member)
 
-    def login(self, member_ID):
-        for ID in models.member.Member.used_IDs:
-            if ID == member_ID:
+    def login(self, member_ID, member_email):
+        for member in self.member_list:
+            if member.ID == member_ID and member.email == member_email:
                 return True
+        return False
             
     def profile(self, member_ID):
         pass

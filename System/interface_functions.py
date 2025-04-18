@@ -11,5 +11,5 @@ def register_interface(library1):
     library1.register(name, birth, email)
     print(library1.member_list[-1])
 
-def login_interface(library1, user_input):
-    return library1.login(user_input)
+def login_interface(library1, user_input_ID, user_input_email):
+    return library1.login(user_input_ID, user_input_email)
