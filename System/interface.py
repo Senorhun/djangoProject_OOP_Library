@@ -3,6 +3,7 @@ import system.interface_functions as sif
 
 library1 = Library("Library")
 library1.register("Bono", 1990, "bono@", "0000-AA", True)
+library1.add_book("Book1", 1987, "SmartOne")
 print("\nWelcome to the Library")
 
 def run():
@@ -27,7 +28,7 @@ def run():
                                 case '2':
                                     sif.add_book(library1)
                                 case '3':
-                                    pass
+                                    sif.borrow_book(library1, user_input_ID)
                                 case '4':
                                     print("Logout successfully")
                                     break

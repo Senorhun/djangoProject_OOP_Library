@@ -18,3 +18,7 @@ def add_book(library1):
     user_input_date = input("Enter the book date: ")
     user_input_author = input("Enter the book author: ")
     library1.add_book(user_input_title, user_input_date, user_input_author)
+
+def borrow_book(library1, user_input_ID):
+    user_input_title = input("Enter book's title: ")
+    library1.borrow_book(user_input_title, user_input_ID)

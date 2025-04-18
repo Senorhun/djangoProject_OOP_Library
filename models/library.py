@@ -31,7 +31,19 @@ class Library:
         book = models.book.Book(title, date, author)
         self.book_list.append(book)
 
-   
+    def find_member(self, member_ID):
+         for member in self.member_list:
+             if member.ID == member_ID:
+                return member
+
+    def borrow_book(self, borrow_book_title, member_ID):
+        member = self.find_member(member_ID)
+        for book in self.book_list:
+            if book.title == borrow_book_title:
+                member.borrowed_books.append(book)
+                self.book_list.remove(book)
+                print(f"Book {book.title} succesfully borrowed by member {member.name}")
+            
 
     def profile(self, member_ID):
         pass
