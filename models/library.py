@@ -25,9 +25,9 @@ class Library:
             if ID == member_ID:
                 return True
             
-    def access(self, is_login):
+    def profile(self, member_ID):
         pass
-    
+
     def list_data(self):
         return f"Institute name: {self.name} \nMembers: {self.list_members()} \nBooks: {self.list_books()}"
     
