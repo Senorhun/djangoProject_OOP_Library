@@ -1,5 +1,4 @@
 
-
 def list_books_interface(library1):
     library1.list_books()
 
@@ -13,3 +12,9 @@ def register_interface(library1):
 
 def login_interface(library1, user_input_ID, user_input_email):
     return library1.login(user_input_ID, user_input_email)
+
+def add_book(library1):
+    user_input_title = input("Enter the book title: ")
+    user_input_date = input("Enter the book date: ")
+    user_input_author = input("Enter the book author: ")
+    library1.add_book(user_input_title, user_input_date, user_input_author)

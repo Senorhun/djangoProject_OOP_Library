@@ -1,5 +1,4 @@
 
-people_list = []
 
 class Person:
 

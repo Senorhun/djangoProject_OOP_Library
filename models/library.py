@@ -1,12 +1,12 @@
 import models.member
+import models.book
 
 class Library:
-    member_list = []
-
-    def __init__(self, name, member_list, book_list):
+    
+    def __init__(self, name):
         self.name = name
-        self.member_list = member_list
-        self.book_list = book_list
+        self.member_list = []
+        self.book_list = []
         self.access_code = 777
 
     def list_books(self):
@@ -17,7 +17,7 @@ class Library:
         for member in self.member_list:
             print(member)
 
-    def register(self, name, birth, email, ID, librarian = False):
+    def register(self, name, birth, email, ID = None, librarian = False):
         member = models.member.Member(name, birth, email, ID, librarian)
         self.member_list.append(member)
 
@@ -26,7 +26,13 @@ class Library:
             if member.ID == member_ID and member.email == member_email:
                 return True
         return False
-            
+    
+    def add_book(self, title, date, author):
+        book = models.book.Book(title, date, author)
+        self.book_list.append(book)
+
+   
+
     def profile(self, member_ID):
         pass
 
