@@ -3,8 +3,9 @@ import random, string
 
 class Member(Person):
     used_IDs = set()
+    
 
-    def __init__(self, name, birth, email, ID=None):
+    def __init__(self, name, birth, email):
         super().__init__(name, birth)
         self.email = email
         self.is_librarian = False
@@ -16,7 +17,6 @@ class Member(Person):
             if unique_id not in Member.used_IDs:
                 Member.used_IDs.add(unique_id)
                 return unique_id
-
 
     def __str__(self):
         return f"Member => {super().__str__()}, Email: {self.email}, ID: {self.ID}, Librarian: {self.is_librarian}" 
