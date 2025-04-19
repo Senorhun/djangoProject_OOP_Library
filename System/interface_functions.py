@@ -10,28 +10,32 @@ def register_interface(library1):
     library1.register(name, birth, email)
     print(library1.member_list[-1])
 
+def delete_member_interface(library1):
+    user_input_delete_member_ID = input("Enter deleting member ID: ")
+    library1.delete_member(user_input_delete_member_ID)
+
 def login_interface(library1, user_input_ID, user_input_email):
     return library1.login(user_input_ID, user_input_email)
 
-def add_book(library1):
+def add_book_interface(library1):
     user_input_title = input("Enter the book title: ")
     user_input_date = input("Enter the book date: ")
     user_input_author = input("Enter the book author: ")
     library1.add_book(user_input_title, user_input_date, user_input_author)
 
-def borrow_book(library1, user_input_ID):
+def borrow_book_interface(library1, user_input_ID):
     user_input_title = input("Enter book's title: ")
     library1.borrow_book(user_input_title, user_input_ID)
 
-def unborrow_book(library1, user_input_ID):
+def unborrow_book_interface(library1, user_input_ID):
     user_input_title = input("Enter book's title: ")
     library1.unborrow_book(user_input_title, user_input_ID)
 
-def profile(library1, user_input_ID):
+def profile_interface(library1, user_input_ID):
     library1.profile(user_input_ID)
 
-def login_librarian(library1, user_input_ID):
+def login_librarian_interface(library1, user_input_ID):
     return library1.login_librarian(user_input_ID)
 
-def list_members(library1):
+def list_members_interface(library1):
     library1.list_members()

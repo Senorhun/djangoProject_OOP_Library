@@ -21,6 +21,10 @@ class Library:
         member = models.member.Member(name, birth, email, ID, librarian)
         self.member_list.append(member)
 
+    def delete_member(self, member_ID):
+        member = self.find_member(member_ID)
+        self.member_list.remove(member)
+
     def login(self, member_ID, member_email):
         for member in self.member_list:
             if member.ID == member_ID and member.email == member_email:

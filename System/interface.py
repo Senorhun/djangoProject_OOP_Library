@@ -38,42 +38,50 @@ def member_run():
                     case '2':
                         librarian_run(user_input_ID)
                     case '3':
-                        sif.add_book(library1)
+                        sif.add_book_interface(library1)
                     case '4':
-                        sif.borrow_book(library1, user_input_ID)
+                        sif.borrow_book_interface(library1, user_input_ID)
                     case '5':
-                        sif.unborrow_book(library1, user_input_ID)
+                        sif.unborrow_book_interface(library1, user_input_ID)
                     case '6':
-                        sif.profile(library1, user_input_ID)
+                        sif.profile_interface(library1, user_input_ID)
                     case '7':
                         print("Logout successfully")
                         break
+                    case _:
+                        print("Not recognizable input, please select a number from the list provided.")
             case _:
                 print("Wrong access ID")
                 break
 
 def librarian_run(user_input_ID):
-    user_input_access_librarian = sif.login_librarian(library1, user_input_ID)
+    user_input_access_librarian = sif.login_librarian_interface(library1, user_input_ID)
     while True:
         match user_input_access_librarian:
             case True:
-                user_input = input("\nWelcome Librarian, select a number from the list below:\n1) Browsing books\n2) List members\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Logout\n")
+                user_input = input("\nWelcome Librarian, select a number from the list below:\n1) Browsing books\n2) List members\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Register new member\n8) Delete member\n9) Logout\n")
                 match user_input:
                     case '1':
                         sif.list_books_interface(library1)
                     case '2':
-                        sif.list_members(library1)
+                        sif.list_members_interface(library1)
                     case '3':
-                        sif.add_book(library1)
+                        sif.add_book_interface(library1)
                     case '4':
-                        sif.borrow_book(library1, user_input_ID)
+                        sif.borrow_book_interface(library1, user_input_ID)
                     case '5':
-                        sif.unborrow_book(library1, user_input_ID)
+                        sif.unborrow_book_interface(library1, user_input_ID)
                     case '6':
-                        sif.profile(library1, user_input_ID)
+                        sif.profile_interface(library1, user_input_ID)
                     case '7':
+                        sif.register_interface(library1)
+                    case '8':
+                        sif.delete_member_interface(library1)
+                    case '9':
                         print("Logout successfully")
                         break
+                    case _:
+                        print("Not recognizable input, please select a number from the list provided.")
             case _:
                 print("Wrong access")
                 break
