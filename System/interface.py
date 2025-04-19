@@ -35,6 +35,31 @@ def member_run():
                 match user_input:
                     case '1':
                         sif.list_books_interface(library1)
+                    case '2':
+                        user_input_access_librarian = sif.login_librarian(library1, user_input_ID)
+                        while True:
+                            match user_input_access_librarian:
+                                case True:
+                                    user_input = input("\nWelcome Librarian, select a number from the list below:\n1) Browsing books\n2) ??\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Logout\n")
+                                    match user_input:
+                                        case '1':
+                                            sif.list_books_interface(library1)
+                                        case '2':
+                                            pass
+                                        case '3':
+                                            sif.add_book(library1)
+                                        case '4':
+                                            sif.borrow_book(library1, user_input_ID)
+                                        case '5':
+                                            sif.unborrow_book(library1, user_input_ID)
+                                        case '6':
+                                            sif.profile(library1, user_input_ID)
+                                        case '7':
+                                            print("Logout successfully")
+                                            break
+                                case _:
+                                    print("Wrong access")
+                                    break
                     case '3':
                         sif.add_book(library1)
                     case '4':

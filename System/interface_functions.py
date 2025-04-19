@@ -30,4 +30,5 @@ def unborrow_book(library1, user_input_ID):
 def profile(library1, user_input_ID):
     library1.profile(user_input_ID)
 
-
+def login_librarian(library1, user_input_ID):
+    return library1.login_librarian(user_input_ID)

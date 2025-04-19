@@ -52,7 +52,11 @@ class Library:
                 self.book_list.append(book)
                 print(f"Book {book.title} succesfully unborrowed by member {member.name}")
     
-   
+    def login_librarian(self, member_ID):
+        member = self.find_member(member_ID)
+        user_input_access_code = input("Enter Library acess code: ")
+        if user_input_access_code == self.access_code and member.is_librarian == True:
+            return True
 
     def profile(self, member_ID):
         member = self.find_member(member_ID)
