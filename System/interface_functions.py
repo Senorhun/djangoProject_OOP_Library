@@ -32,3 +32,6 @@ def profile(library1, user_input_ID):
 
 def login_librarian(library1, user_input_ID):
     return library1.login_librarian(user_input_ID)
+
+def list_members(library1):
+    library1.list_members()
