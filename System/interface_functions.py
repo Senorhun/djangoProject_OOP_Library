@@ -10,6 +10,9 @@ def register_interface(library1):
     library1.register(name, birth, email)
     print(library1.member_list[-1])
 
+def modify_member(library1):
+    library1.modify_member()
+
 def delete_member_interface(library1):
     user_input_delete_member_ID = input("Enter deleting member ID: ")
     library1.delete_member(user_input_delete_member_ID)

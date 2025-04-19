@@ -27,11 +27,11 @@ def run():
 def member_run():
     user_input_email = input("\nEnter member email: ")
     user_input_ID = input("\nEnter member ID:\n")
-    user_input_access = sif.login_interface(library1, user_input_ID, user_input_email)
+    user_input_access, member_name = sif.login_interface(library1, user_input_ID, user_input_email)
     while True:
         match user_input_access:
             case True:
-                user_input = input("\nWelcome member, select a number from the list below:\n1) Browsing books\n2) Login as librarian\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Logout\n")
+                user_input = input(f"\nWelcome member {member_name}, select a number from the list below:\n1) Browsing books\n2) Login as librarian\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Logout\n")
                 match user_input:
                     case '1':
                         sif.list_books_interface(library1)
@@ -55,12 +55,14 @@ def member_run():
                 break
 
 def librarian_run(user_input_ID):
-    user_input_access_librarian = sif.login_librarian_interface(library1, user_input_ID)
+    user_input_access_librarian, member_name = sif.login_librarian_interface(library1, user_input_ID)
     while True:
         match user_input_access_librarian:
             case True:
-                user_input = input("\nWelcome Librarian, select a number from the list below:\n1) Browsing books\n2) List members\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Register new member\n8) Delete member\n9) Logout\n")
+                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1) Browsing books\n2) List members\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Register new member\n8) Delete member\n9) Logout\n")
                 match user_input:
+                    case '0':
+                        sif.modify_member(library1)
                     case '1':
                         sif.list_books_interface(library1)
                     case '2':
