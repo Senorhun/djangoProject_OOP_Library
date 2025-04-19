@@ -21,7 +21,7 @@ def run():
                 while True:
                     match user_input_access:
                         case True:
-                            user_input = input("\nWelcome member, select a number from the list below:\n1) Browsing books\n2) Add new book\n3) Borrow book\n4) Logout\n")
+                            user_input = input("\nWelcome member, select a number from the list below:\n1) Browsing books\n2) Add new book\n3) Borrow book\n4) Unborrow book\n5) Profile\n6) Logout\n")
                             match user_input:
                                 case '1':
                                     sif.list_books_interface(library1)
@@ -30,6 +30,10 @@ def run():
                                 case '3':
                                     sif.borrow_book(library1, user_input_ID)
                                 case '4':
+                                    sif.unborrow_book(library1, user_input_ID)
+                                case '5':
+                                    sif.profile(library1, user_input_ID)
+                                case '6':
                                     print("Logout successfully")
                                     break
                         case _:

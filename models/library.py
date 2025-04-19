@@ -43,10 +43,20 @@ class Library:
                 member.borrowed_books.append(book)
                 self.book_list.remove(book)
                 print(f"Book {book.title} succesfully borrowed by member {member.name}")
-            
+    
+    def unborrow_book(self, borrow_book_title, member_ID):
+        member = self.find_member(member_ID)
+        for book in member.borrowed_books:
+            if book.title == borrow_book_title:
+                member.borrowed_books.remove(book)
+                self.book_list.append(book)
+                print(f"Book {book.title} succesfully unborrowed by member {member.name}")
+    
 
     def profile(self, member_ID):
-        pass
+        member = self.find_member(member_ID)
+        borrowed_books = [f"{book.title}" for book in member.borrowed_books]
+        print(f"Member => Name: {member.name}, Email: {member.email}, ID: {member.ID}, Librarian: {member.is_librarian}, Borrowed books: {borrowed_books}" )
 
     def list_data(self):
         return f"Institute name: {self.name} \nMembers: {self.list_members()} \nBooks: {self.list_books()}"

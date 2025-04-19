@@ -22,3 +22,10 @@ def add_book(library1):
 def borrow_book(library1, user_input_ID):
     user_input_title = input("Enter book's title: ")
     library1.borrow_book(user_input_title, user_input_ID)
+
+def unborrow_book(library1, user_input_ID):
+    user_input_title = input("Enter book's title: ")
+    library1.unborrow_book(user_input_title, user_input_ID)
+
+def profile(library1, user_input_ID):
+    library1.profile(user_input_ID)
