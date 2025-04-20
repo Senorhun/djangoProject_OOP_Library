@@ -92,6 +92,17 @@ class Library:
         borrowed_books = [f"{book.title}" for book in member.borrowed_books]
         print(f"Member => Name: {member.name}, Email: {member.email}, ID: {member.ID}, Librarian: {member.is_librarian}, Borrowed books: {borrowed_books}" )
 
+    def save_members_to_file(self, filename):
+        with open(filename, "w") as f:
+            for member in self.member_list:
+                f.write(f"{member.name},{member.birth},{member.email},{member.ID}, has librarian access: {member.is_librarian}, borrowed books: {'|'.join([book.title for book in member.borrowed_books])}\n")
+
+    def save_books_to_file(self, filename):
+        with open(filename, "w") as f:
+            for book in self.book_list:
+                f.write(f"{book.title},{book.date},{book.author}")
+
+
     def list_data(self):
         return f"Institute name: {self.name} \nMembers: {self.list_members()} \nBooks: {self.list_books()}"
     

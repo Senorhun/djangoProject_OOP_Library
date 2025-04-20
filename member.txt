@@ -1,0 +1,1 @@
+Bono,1990,bono@,0000-AA, has librarian access: True, borrowed books: Book1|Book2

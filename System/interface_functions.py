@@ -42,3 +42,9 @@ def login_librarian_interface(library1, user_input_ID):
 
 def list_members_interface(library1):
     library1.list_members()
+
+def save_members_to_file(library1):
+    library1.save_members_to_file("member.txt")
+
+def save_books_to_file(library1):
+    library1.save_books_to_file("book.txt")

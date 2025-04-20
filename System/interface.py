@@ -59,10 +59,8 @@ def librarian_run(user_input_ID):
     while True:
         match user_input_access_librarian:
             case True:
-                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1) Browsing books\n2) List members\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Register new member\n8) Delete member\n9) Logout\n")
+                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1)  Browsing books\n2)  List members\n3)  Add new book\n4)  Borrow book\n5)  Unborrow book\n6)  Profile\n7)  Register new member\n8)  Delete member\n9)  Modify member data\n10) Save members into txt\n11) Save book into txt\n12) Logout\n")
                 match user_input:
-                    case '0':
-                        sif.modify_member(library1)
                     case '1':
                         sif.list_books_interface(library1)
                     case '2':
@@ -80,6 +78,12 @@ def librarian_run(user_input_ID):
                     case '8':
                         sif.delete_member_interface(library1)
                     case '9':
+                        sif.modify_member(library1)
+                    case '10':
+                        sif.save_members_to_file(library1)
+                    case '11':
+                        sif.save_books_to_file(library1)
+                    case '12':
                         print("Logout successfully")
                         break
                     case _:
