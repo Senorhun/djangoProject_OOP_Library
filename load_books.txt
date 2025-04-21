@@ -1,6 +1,52 @@
-Book1,1987,SmartOne
-Book2,1223,Bob1
-Book3,1224,Bob2
-Book4,1225,Bob3
-Book5,1226,Bob4
-Book6,1227,Bob5
+[
+    {
+        "title": "The Silent Forest",
+        "date": 2001,
+        "author": "Ava Greenwood"
+    },
+    {
+        "title": "Echoes of the Deep",
+        "date": 1998,
+        "author": "Leo Marlowe"
+    },
+    {
+        "title": "Chronicles of Ash",
+        "date": 2015,
+        "author": "Selene Ward"
+    },
+    {
+        "title": "The Last Light",
+        "date": 2010,
+        "author": "Darian Cole"
+    },
+    {
+        "title": "Whispers in the Wind",
+        "date": 2007,
+        "author": "Freya Lark"
+    },
+    {
+        "title": "Gears and Dust",
+        "date": 2018,
+        "author": "Elliot Stone"
+    },
+    {
+        "title": "Aether Storm",
+        "date": 2020,
+        "author": "Nova Thorne"
+    },
+    {
+        "title": "The Forgotten Code",
+        "date": 2013,
+        "author": "Kai Fletcher"
+    },
+    {
+        "title": "Warden of Shadows",
+        "date": 2005,
+        "author": "Iris Blackwell"
+    },
+    {
+        "title": "Shattered Realms",
+        "date": 2022,
+        "author": "Luca Phoenix"
+    }
+]

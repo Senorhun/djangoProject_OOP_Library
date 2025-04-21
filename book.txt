@@ -3,10 +3,5 @@
         "title": "Book3",
         "date": 1987,
         "author": "SmartOne"
-    },
-    {
-        "title": "Book4",
-        "date": "1234",
-        "author": "somone2"
     }
 ]

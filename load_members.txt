@@ -1,6 +1,72 @@
-Bono,1990,bono@,0000-AA, True,
-Bono1,1990,bono@,0000-AA, False,
-Bono2,1990,bono@,0000-AA, False,
-Bono3,1990,bono@,0000-AA, False,
-Bono4,1990,bono@,0000-AA, False,
-Bono5,1990,bono@,0000-AA, False,
+[
+    {
+        "name": "Leni",
+        "birth": 1991,
+        "email": "Leni@",
+        "ID": "1981-AB",
+        "is_librarian": false
+    },
+    {
+        "name": "Juno",
+        "birth": 1992,
+        "email": "juno@",
+        "ID": "1234-BB",
+        "is_librarian": false
+    },
+    {
+        "name": "Mira",
+        "birth": 1988,
+        "email": "mira@",
+        "ID": "2345-CC",
+        "is_librarian": false
+    },
+    {
+        "name": "Lena",
+        "birth": 1995,
+        "email": "lena@",
+        "ID": "3456-DD",
+        "is_librarian": false
+    },
+    {
+        "name": "Zane",
+        "birth": 1985,
+        "email": "zane@",
+        "ID": "4567-EE",
+        "is_librarian": true
+    },
+    {
+        "name": "Tomi",
+        "birth": 1991,
+        "email": "tomi@",
+        "ID": "5678-FF",
+        "is_librarian": false
+    },
+    {
+        "name": "Rina",
+        "birth": 1993,
+        "email": "rina@",
+        "ID": "6789-GG",
+        "is_librarian": false
+    },
+    {
+        "name": "Noel",
+        "birth": 1989,
+        "email": "noel@",
+        "ID": "7890-HH",
+        "is_librarian": false
+    },
+    {
+        "name": "Sami",
+        "birth": 1996,
+        "email": "sami@",
+        "ID": "8901-II",
+        "is_librarian": false
+    },
+    {
+        "name": "Kira",
+        "birth": 1994,
+        "email": "kira@",
+        "ID": "9012-JJ",
+        "is_librarian": true
+    }
+]

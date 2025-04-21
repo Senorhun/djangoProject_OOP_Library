@@ -24,11 +24,15 @@ class Library:
         for member in self.member_list:
             if member.ID == member_ID:
                 print(member)
+                return
+        print(f"No member found with ID: {member_ID}")
 
     def search_member_email(self, member_email):
         for member in self.member_list:
             if member.email == member_email:
                 print(member)
+                return
+        print(f"No member found with email: {member_email}")
 
     def register(self, name, birth, email, ID = None, librarian = False):
         member = models.member.Member(name, birth, email, ID, librarian)

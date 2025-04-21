@@ -1,6 +1,6 @@
 [
     {
-        "name": "Bono1",
+        "name": "Bono",
         "birth": 1990,
         "email": "bono@",
         "ID": "0000-AA",
