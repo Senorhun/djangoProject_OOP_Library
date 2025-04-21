@@ -34,7 +34,7 @@ def member_run():
                 user_input = input(f"\nWelcome member {member_name}, select a number from the list below:\n1) Browsing books\n2) Login as librarian\n3) Add new book\n4) Borrow book\n5) Unborrow book\n6) Profile\n7) Logout\n")
                 match user_input:
                     case '1':
-                        sif.list_books_interface(library1)
+                        sif.list_books_interface(library1)           
                     case '2':
                         librarian_run(user_input_ID)
                     case '3':
@@ -59,7 +59,7 @@ def librarian_run(user_input_ID):
     while True:
         match user_input_access_librarian:
             case True:
-                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1)  Browsing books\n2)  List members\n3)  Add new book\n4)  Borrow book\n5)  Unborrow book\n6)  Profile\n7)  Register new member\n8)  Delete member\n9)  Modify member data\n10) Save members to file\n11) Load member from txt\n12) Save books to file\n13) Load books from txt\n14) Logout\n")
+                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1)  Browsing books\n2)  List members\n3)  Add new book\n4)  Borrow book\n5)  Unborrow book\n6)  Profile\n7)  Register new member\n8)  Delete member\n9)  Delete book\n10) Modify member data\n11) Save members to file\n12) Load member from file\n13) Save books to file\n14) Load books from file\n15) Search for member via email\n16) Search for member via ID\n17) Logout\n")
                 match user_input:
                     case '1':
                         sif.list_books_interface(library1)
@@ -78,16 +78,22 @@ def librarian_run(user_input_ID):
                     case '8':
                         sif.delete_member_interface(library1)
                     case '9':
-                        sif.modify_member(library1)
+                        sif.delete_book_interface(library1)
                     case '10':
-                        sif.save_members_to_file(library1)
+                        sif.modify_member(library1)
                     case '11':
-                        sif.load_members_from_file(library1)
+                        sif.save_members_to_file_interface(library1)
                     case '12':
-                        sif.save_books_to_file(library1)
+                        sif.load_members_from_file_interface(library1)
                     case '13':
-                        sif.load_books_from_file(library1)
+                        sif.save_books_to_file_interface(library1)
                     case '14':
+                        sif.load_books_from_file_interface(library1)
+                    case '15':
+                        sif.search_member_email_interface(library1)
+                    case '16':
+                        sif.search_member_ID_interface(library1)
+                    case '17':
                         print("Logout successfully")
                         break
                     case _:

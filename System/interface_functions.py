@@ -17,6 +17,10 @@ def delete_member_interface(library1):
     user_input_delete_member_ID = input("Enter deleting member ID: ")
     library1.delete_member(user_input_delete_member_ID)
 
+def delete_book_interface(library1):
+    user_input_delete_book_title = input("Enter deleting book title: ")
+    library1.delete_book(user_input_delete_book_title)
+
 def login_interface(library1, user_input_ID, user_input_email):
     return library1.login(user_input_ID, user_input_email)
 
@@ -43,16 +47,24 @@ def login_librarian_interface(library1, user_input_ID):
 def list_members_interface(library1):
     library1.list_members()
 
-def save_members_to_file(library1):
+def save_members_to_file_interface(library1):
     library1.save_members_to_file("member.txt")
 
-def load_members_from_file(library1):
+def load_members_from_file_interface(library1):
     members_file = input("Enter file name you load from: ")
     library1.load_members_from_file(members_file)
 
-def save_books_to_file(library1):
+def save_books_to_file_interface(library1):
     library1.save_books_to_file("book.txt")
 
-def load_books_from_file(library1):
+def load_books_from_file_interface(library1):
     books_file = input("Enter file name you load from: ")
     library1.load_books_from_file(books_file)
+
+def search_member_ID_interface(library1):
+    member_ID = input("Enter member ID to search: ")
+    library1.search_member_ID(member_ID)
+    
+def search_member_email_interface(library1):
+    member_email = input("Enter member email to search: ")
+    library1.search_member_email(member_email)

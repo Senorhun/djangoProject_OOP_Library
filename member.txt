@@ -1,7 +1,9 @@
-Bono,1990,bono@,0000-AA,True,
-Bono,1990,bono@,0000-AA,True,
-Bono1,1990,bono@,0000-AA,False,
-Bono2,1990,bono@,0000-AA,False,
-Bono3,1990,bono@,0000-AA,False,
-Bono4,1990,bono@,0000-AA,False,
-Bono5,1990,bono@,0000-AA,False,
+[
+    {
+        "name": "Bono1",
+        "birth": 1990,
+        "email": "bono@",
+        "ID": "0000-AA",
+        "is_librarian": true
+    }
+]
