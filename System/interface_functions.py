@@ -46,5 +46,13 @@ def list_members_interface(library1):
 def save_members_to_file(library1):
     library1.save_members_to_file("member.txt")
 
+def load_members_from_file(library1):
+    members_file = input("Enter file name you load from: ")
+    library1.load_members_from_file(members_file)
+
 def save_books_to_file(library1):
     library1.save_books_to_file("book.txt")
+
+def load_books_from_file(library1):
+    books_file = input("Enter file name you load from: ")
+    library1.load_books_from_file(books_file)

@@ -95,12 +95,42 @@ class Library:
     def save_members_to_file(self, filename):
         with open(filename, "w") as f:
             for member in self.member_list:
-                f.write(f"{member.name},{member.birth},{member.email},{member.ID}, has librarian access: {member.is_librarian}, borrowed books: {'|'.join([book.title for book in member.borrowed_books])}\n")
+                f.write(f"{member.name},{member.birth},{member.email},{member.ID},{member.is_librarian},{'|'.join(book.title for book in member.borrowed_books)}\n")
+        print("Members successfully saved to file")
+
+    def load_members_from_file(self, filename):
+        try:
+            with open(filename, "r") as f:
+                for line in f:
+                    parts = line.strip().split(",")
+                    name, birth, email, ID, is_librarian = parts[:5]
+                    is_librarian_bool = is_librarian.strip().lower() == "true"           
+                    member = models.member.Member(name, birth, email, ID, is_librarian_bool)
+                    self.member_list.append(member)
+            print("Members successfully loaded from file")
+        except FileNotFoundError:
+            print("Member file not found.")
+
 
     def save_books_to_file(self, filename):
-        with open(filename, "w") as f:
-            for book in self.book_list:
-                f.write(f"{book.title},{book.date},{book.author}")
+            with open(filename, "w") as f:
+                for book in self.book_list:
+                    f.write(f"{book.title},{book.date},{book.author}\n")
+            print("Books successfully saved to file")
+
+
+    def load_books_from_file(self, filename):
+        try:
+            with open(filename, "r") as f:
+                for line in f:
+                    title, date, author = line.strip().split(",")
+                    book = models.book.Book(title, date, author)
+                    self.book_list.append(book)
+            print("Books successfully loaded from file")
+        except FileNotFoundError:
+            print("Book file not found.")
+        except ValueError:
+            print("One of the book entries is incorrectly formatted.")
 
 
     def list_data(self):
