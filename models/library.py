@@ -34,6 +34,31 @@ class Library:
                 return
         print(f"No member found with email: {member_email}")
 
+    def search_book_title(self, book_title):
+        for book in self.book_list:
+            if book.title == book_title:
+                print(book)
+                return
+        print(f"No book found with title: {book_title}")
+
+    def search_book_author(self, book_author):
+        is_found = False
+        for book in self.book_list:
+            if book.author == book_author:
+                print(book)
+                is_found = True
+        if not is_found:
+            print(f"No book found with author: {book_author}")
+
+    def search_book_date(self, book_date):
+        is_found = False
+        for book in self.book_list:
+            if book.date == book_date:
+                print(book)
+                is_found = True
+        if not is_found:
+            print(f"No book found with date: {book_date}")
+
     def register(self, name, birth, email, ID = None, librarian = False):
         member = models.member.Member(name, birth, email, ID, librarian)
         self.member_list.append(member)

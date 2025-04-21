@@ -26,7 +26,7 @@ def login_interface(library1, user_input_ID, user_input_email):
 
 def add_book_interface(library1):
     user_input_title = input("Enter the book title: ")
-    user_input_date = input("Enter the book date: ")
+    user_input_date = int(input("Enter the book date: "))
     user_input_author = input("Enter the book author: ")
     library1.add_book(user_input_title, user_input_date, user_input_author)
 
@@ -68,3 +68,15 @@ def search_member_ID_interface(library1):
 def search_member_email_interface(library1):
     member_email = input("Enter member email to search: ")
     library1.search_member_email(member_email)
+
+def search_book_title_interface(library1):
+    book_title = input("Enter book title to search: ")
+    library1.search_book_title(book_title)
+
+def search_book_author_interface(library1):
+    book_author = input("Enter book author to search: ")
+    library1.search_book_author(book_author)
+
+def search_book_date_interface(library1):
+    book_date = int(input("Enter book date to search: "))
+    library1.search_book_date(book_date)
