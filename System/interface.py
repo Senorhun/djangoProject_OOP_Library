@@ -48,7 +48,7 @@ def books_run():
                 break
 def run():
     while True:
-        user_input = input("\nWelcome Visitor, select a number from the list below:\n1) Member section\n2) Visitor book section\n3) Leave Library\n")
+        user_input = input("\nWelcome Visitor, select a number from the list below:\n1) Login as Member\n2) Book section\n3) Leave Library\n")
         match user_input:
             case '1':
                 member_run()
@@ -93,7 +93,7 @@ def librarian_run(user_input_ID):
     while True:
         match user_input_access_librarian:
             case True:
-                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1)  Save books from file\n2)  Load books from file\n3) Delete book\n4)  Profile\n5)  Book section\n6)  Librarian section\n20) Logout\n")
+                user_input = input(f"\nWelcome Librarian {member_name}, select a number from the list below:\n1) Save books to file\n2) Load books from file\n3) Delete book\n4) Profile\n5) Book section\n6) Librarian section\n7) Logout\n")
                 match user_input:
                     case '1':
                         sif.save_books_to_file_interface(library1)
